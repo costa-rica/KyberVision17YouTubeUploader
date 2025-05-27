@@ -2,6 +2,9 @@ require("dotenv").config();
 const path = require("path");
 const yargs = require("yargs");
 const uploadVideo = require("./modules/uploader");
+// const fs = require("fs");
+// const now = new Date().toISOString();
+// fs.writeFileSync("status.txt", `Started at: ${now}\n`, { flag: "a" });
 
 const argv = yargs
   .option("filename", {
