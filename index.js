@@ -13,11 +13,17 @@ const argv = yargs
     type: "string",
     demandOption: true,
   })
+  .option("videoId", {
+    alias: "v",
+    description: "ID of the video to upload",
+    type: "string",
+    demandOption: true,
+  })
   .help()
   .alias("help", "h").argv;
 
 const filePath = path.join(process.env.PATH_VIDEOS_UPLOAD03, argv.filename);
 
-uploadVideo(filePath)
+uploadVideo(filePath, argv.videoId)
   .then(() => console.log("Upload completed!"))
   .catch((err) => console.error("Upload failed:", err.message));

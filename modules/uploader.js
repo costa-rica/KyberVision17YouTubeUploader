@@ -1,6 +1,7 @@
 const fs = require("fs");
 const { google } = require("googleapis");
 const { Video } = require("kybervision15db");
+
 async function uploadVideo(filePath, videoId) {
   const oauth2Client = new google.auth.OAuth2(
     process.env.YOUTUBE_CLIENT_ID,
@@ -44,12 +45,16 @@ async function uploadVideo(filePath, videoId) {
     }
   );
 
-  console.log("\nVideo ID:", res.data.id);
+  console.log("YouTubeVideo ID:", res.data.id);
+  console.log("KV Video ID:", videoId);
+  const uploadedVideo = await Video.findByPk(videoId);
+  uploadedVideo.youTubeVideoId = res.data.id;
+  await uploadedVideo.save();
 
-  await Video.update(
-    { youTubeVideoId: res.data.id },
-    { where: { id: videoId } }
-  );
+  // await Video.update(
+  //   { where: { id: videoId } },
+  //   { youTubeVideoId: res.data.id }
+  // );
 }
 
 module.exports = uploadVideo;
