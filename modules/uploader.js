@@ -1,6 +1,6 @@
 const fs = require("fs");
 const { google } = require("googleapis");
-const { Video } = require("kybervision15db");
+const { Video } = require("kybervision16db");
 
 async function uploadVideo(filePath, videoId) {
   const oauth2Client = new google.auth.OAuth2(
@@ -27,7 +27,7 @@ async function uploadVideo(filePath, videoId) {
       requestBody: {
         snippet: {
           title: fileName,
-          description: "Uploaded by KyberVision15YouTubeUploader",
+          description: "Uploaded by KyberVision16YouTubeUploader",
         },
         status: {
           privacyStatus: "unlisted",

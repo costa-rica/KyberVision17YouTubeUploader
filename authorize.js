@@ -15,7 +15,7 @@ const SCOPES = [
 ];
 
 // Path to the directory containing video files
-const VIDEOS_DIR = process.env.PATH_VIDEOS_UPLOAD03;
+const VIDEOS_DIR = process.env.PATH_VIDEOS_UPLOADED;
 
 // Path to store the user's credentials (token.json)
 const TOKEN_PATH = path.join(process.cwd(), "authJsonFiles", "token.json");

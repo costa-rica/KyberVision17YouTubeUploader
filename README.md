@@ -1,4 +1,4 @@
-# KyberVision15YouTubeUploader
+# KyberVision16YouTubeUploader
 
 ## Using the app
 
@@ -32,7 +32,7 @@ yarn add googleapis dotenv yargs
 ## env
 
 ```bash
-PATH_VIDEOS_UPLOAD03=/Users/yourname/VideosToUpload
+PATH_VIDEOS_UPLOADED=/Users/yourname/VideosToUpload
 CLIENT_ID=your_google_client_id
 CLIENT_SECRET=your_google_client_secret
 REDIRECT_URI=your_redirect_uri

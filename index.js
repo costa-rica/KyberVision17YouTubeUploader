@@ -22,7 +22,7 @@ const argv = yargs
   .help()
   .alias("help", "h").argv;
 
-const filePath = path.join(process.env.PATH_VIDEOS_UPLOAD03, argv.filename);
+const filePath = path.join(process.env.PATH_VIDEOS_UPLOADED, argv.filename);
 
 uploadVideo(filePath, argv.videoId)
   .then(() => console.log("Upload completed!"))
