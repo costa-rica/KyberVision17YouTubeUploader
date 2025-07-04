@@ -36,13 +36,13 @@ async function uploadVideo(filePath, videoId) {
       media: {
         body: fs.createReadStream(filePath),
       },
-    },
-    {
-      onUploadProgress: (evt) => {
-        const progress = (evt.bytesRead / fileSize) * 100;
-        process.stdout.write(`Uploading: ${progress.toFixed(2)}%\r`);
-      },
     }
+    // {
+    //   onUploadProgress: (evt) => {
+    //     const progress = (evt.bytesRead / fileSize) * 100;
+    //     process.stdout.write(`Uploading: ${progress.toFixed(2)}%\r`);
+    //   },
+    // }
   );
 
   console.log("YouTubeVideo ID:", res.data.id);
