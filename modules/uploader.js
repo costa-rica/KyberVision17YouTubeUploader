@@ -49,6 +49,7 @@ async function uploadVideo(filePath, videoId) {
   console.log("KV Video ID:", videoId);
   const uploadedVideo = await Video.findByPk(videoId);
   uploadedVideo.youTubeVideoId = res.data.id;
+  uploadedVideo.processingCompleted = true;
   await uploadedVideo.save();
 
   // await Video.update(
