@@ -24,6 +24,15 @@ const argv = yargs
 
 const filePath = path.join(process.env.PATH_VIDEOS_UPLOADED, argv.filename);
 
+// uploadVideo(filePath, argv.videoId)
+//   .then(() => console.log("Upload completed!"))
+//   .catch((err) => console.error("Upload failed:", err.message));
 uploadVideo(filePath, argv.videoId)
-  .then(() => console.log("Upload completed!"))
-  .catch((err) => console.error("Upload failed:", err.message));
+  .then(() => {
+    console.log("✅ Upload completed!");
+    process.exit(0);
+  })
+  .catch((err) => {
+    console.error("❌ Upload failed:", err.message);
+    process.exit(1);
+  });
