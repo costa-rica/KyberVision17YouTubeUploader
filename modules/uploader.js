@@ -27,7 +27,7 @@ async function uploadVideo(filePath, videoId) {
       requestBody: {
         snippet: {
           title: fileName,
-          description: "Uploaded by KyberVision16YouTubeUploader",
+          description: "Uploaded by KyberVision17YouTubeUploader",
         },
         status: {
           privacyStatus: "unlisted",
@@ -81,7 +81,7 @@ module.exports = uploadVideo;
 //     requestBody: {
 //       snippet: {
 //         title: fileName,
-//         description: "Uploaded by KyberVision16YouTubeUploader",
+//         description: "Uploaded by KyberVision17YouTubeUploader",
 //       },
 //       status: {
 //         privacyStatus: "unlisted",
