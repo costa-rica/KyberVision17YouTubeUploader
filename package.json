@@ -14,7 +14,7 @@
     "@google-cloud/local-auth": "^3.0.1",
     "dotenv": "^16.5.0",
     "googleapis": "^149.0.0",
-    "kybervision16db": "file:../KyberVision16Db",
+    "kybervision17db": "file:../KyberVision17Db",
     "yargs": "^17.7.2"
   }
 }

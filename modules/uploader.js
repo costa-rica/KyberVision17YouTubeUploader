@@ -1,6 +1,6 @@
 const fs = require("fs");
 const { google } = require("googleapis");
-const { Video } = require("kybervision16db");
+const { Video } = require("kybervision17db");
 
 async function uploadVideo(filePath, videoId) {
   try {
@@ -55,7 +55,7 @@ module.exports = uploadVideo;
 
 // const fs = require("fs");
 // const { google } = require("googleapis");
-// const { Video } = require("kybervision16db");
+// const { Video } = require("kybervision17db");
 
 // async function uploadVideo(filePath, videoId) {
 //   const oauth2Client = new google.auth.OAuth2(
